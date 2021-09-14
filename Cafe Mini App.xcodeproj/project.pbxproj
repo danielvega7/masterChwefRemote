@@ -14,6 +14,7 @@
 		1149C63E26EB8E4400341D84 /* Cafe_Mini_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1149C63C26EB8E4400341D84 /* Cafe_Mini_App.xcdatamodeld */; };
 		1149C64026EB8E4700341D84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1149C63F26EB8E4700341D84 /* Assets.xcassets */; };
 		1149C64326EB8E4700341D84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1149C64126EB8E4700341D84 /* LaunchScreen.storyboard */; };
+		11B441DC26F0D3020047E74B /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B441DB26F0D3020047E74B /* ViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1149C63F26EB8E4700341D84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1149C64226EB8E4700341D84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1149C64426EB8E4700341D84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11B441DB26F0D3020047E74B /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				1149C63526EB8E4400341D84 /* SceneDelegate.swift */,
 				1149C63726EB8E4400341D84 /* ViewController.swift */,
 				1149C63926EB8E4400341D84 /* Main.storyboard */,
+				11B441DB26F0D3020047E74B /* ViewController2.swift */,
 				1149C63F26EB8E4700341D84 /* Assets.xcassets */,
 				1149C64126EB8E4700341D84 /* LaunchScreen.storyboard */,
 				1149C64426EB8E4700341D84 /* Info.plist */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11B441DC26F0D3020047E74B /* ViewController2.swift in Sources */,
 				1149C63826EB8E4400341D84 /* ViewController.swift in Sources */,
 				1149C63E26EB8E4400341D84 /* Cafe_Mini_App.xcdatamodeld in Sources */,
 				1149C63426EB8E4400341D84 /* AppDelegate.swift in Sources */,
