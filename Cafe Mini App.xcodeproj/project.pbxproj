@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06FF78F926F397F700CCD0B2 /* AdminPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FF78F826F397F700CCD0B2 /* AdminPasswordViewController.swift */; };
 		1149C63426EB8E4400341D84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1149C63326EB8E4400341D84 /* AppDelegate.swift */; };
 		1149C63626EB8E4400341D84 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1149C63526EB8E4400341D84 /* SceneDelegate.swift */; };
 		1149C63826EB8E4400341D84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1149C63726EB8E4400341D84 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06FF78F826F397F700CCD0B2 /* AdminPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminPasswordViewController.swift; sourceTree = "<group>"; };
 		1149C63026EB8E4400341D84 /* Cafe Mini App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cafe Mini App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1149C63326EB8E4400341D84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1149C63526EB8E4400341D84 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 				1149C63526EB8E4400341D84 /* SceneDelegate.swift */,
 				1149C63726EB8E4400341D84 /* ViewController.swift */,
 				1149C63926EB8E4400341D84 /* Main.storyboard */,
+				06FF78F826F397F700CCD0B2 /* AdminPasswordViewController.swift */,
 				11B441DB26F0D3020047E74B /* ViewController2.swift */,
 				1149C63F26EB8E4700341D84 /* Assets.xcassets */,
 				1149C64126EB8E4700341D84 /* LaunchScreen.storyboard */,
@@ -148,6 +151,7 @@
 				1149C63E26EB8E4400341D84 /* Cafe_Mini_App.xcdatamodeld in Sources */,
 				1149C63426EB8E4400341D84 /* AppDelegate.swift in Sources */,
 				1149C63626EB8E4400341D84 /* SceneDelegate.swift in Sources */,
+				06FF78F926F397F700CCD0B2 /* AdminPasswordViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -29,15 +29,16 @@ var name = ""
     }
     @IBAction func addAction(_ sender: UIButton) {
         if "" != v2foodTextField.text{
-            SuperMegaVariables.daFood.append(v2foodTextField.text!)
+            
             
             if nil != v2priceTextField.text {
                 
                 if Double(v2priceTextField.text!) != nil{
-            SuperMegaVariables.daPrice.append(Double(v2priceTextField.text!)!)
+                    SuperMegaVariables.menuFood.append(v2foodTextField.text!)
+            SuperMegaVariables.menuPrice.append(Double(v2priceTextField.text!)!)
                     
-                    SuperMegaVariables.count += 1
-                    addedLabel.text = "food: \(SuperMegaVariables.daFood[SuperMegaVariables.count]) price: \(SuperMegaVariables.daPrice[SuperMegaVariables.count])"
+                    SuperMegaVariables.menuCount += 1
+                    addedLabel.text = "food: \(SuperMegaVariables.daFood[SuperMegaVariables.menuCount]) price: \(SuperMegaVariables.daPrice[SuperMegaVariables.menuCount])"
                    
                 }
                 else{

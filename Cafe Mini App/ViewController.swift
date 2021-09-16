@@ -9,9 +9,15 @@ import UIKit
 
 class SuperMegaVariables{
     
+static var menuFood = ["rice", "steak", "winter rolls", "pasta"]
+static var menuPrice = [2.50, 5.00, 3.00, 4.00]
+    
 static var daFood = [String]()
 static var daPrice = [Double]()
 static var count = -1
+static var menuCount = 3
+    
+    
 }
 
 
@@ -30,18 +36,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        if (segue.identifier == "toAdmin") {
-        let nvc = segue.destination as! ViewController2
-        nvc.name = foodTextField.text!
-        nvc.price = Double(priceTextField.text!)!
-        }
-    }
     
-    @IBAction func adminAction(_ sender: UIBarButtonItem) {
-        performSegue(withIdentifier: "toAdmin", sender: nil)
-        
-    }
+    
+    
     
     @IBAction func addToCart(_ sender: UIButton) {
         
@@ -81,7 +78,7 @@ class ViewController: UIViewController {
             addedString += "\(jamal + 1).) food: \(SuperMegaVariables.daFood[jamal]) \t price: \(SuperMegaVariables.daPrice[jamal]) \n"
             jamal += 1
         }
-        cartTextView.text = addedString
+        cartTextView.text = "Shopping Cart \n" + addedString
     }
     
     
