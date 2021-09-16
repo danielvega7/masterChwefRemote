@@ -164,7 +164,7 @@
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="add"/>
                             <connections>
-                                <action selector="transferToCart:" destination="Hp1-St-b9G" eventType="touchUpInside" id="Dzj-sV-psT"/>
+                                <action selector="addAction:" destination="Hp1-St-b9G" eventType="touchUpInside" id="Emp-h3-JTL"/>
                             </connections>
                         </button>
                     </navigationItem>

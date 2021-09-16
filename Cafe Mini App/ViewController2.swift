@@ -27,8 +27,7 @@ var name = ""
         
         // Do any additional setup after loading the view.
     }
-    
-    @IBAction func add(_ sender: UIButton) {
+    @IBAction func addAction(_ sender: UIButton) {
         if "" != v2foodTextField.text{
             SuperMegaVariables.daFood.append(v2foodTextField.text!)
             
@@ -53,6 +52,6 @@ var name = ""
             addedLabel.text = "type something in text field bruh"
         }
     }
+    }
     
-    
-}
+
