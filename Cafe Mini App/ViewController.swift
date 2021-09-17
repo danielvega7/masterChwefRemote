@@ -12,9 +12,9 @@ class SuperMegaVariables{
 static var menuFood = ["rice", "steak", "winter rolls", "pasta"]
 static var menuPrice = [2.50, 5.00, 3.00, 4.00]
     
-static var daFood = [String]()
-static var daPrice = [Double]()
-static var count = -1
+static var daFood = ["shopping"]
+    static var daPrice = [0.0]
+static var count = 0
 static var menuCount = 3
     
     
@@ -22,7 +22,7 @@ static var menuCount = 3
 
 
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate{
 
     @IBOutlet weak var foodTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
@@ -33,6 +33,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        foodTextField.delegate = self
+        priceTextField.delegate = self
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -96,7 +101,8 @@ class ViewController: UIViewController {
         
         
         
-        
+        foodTextField.resignFirstResponder()
+        priceTextField.resignFirstResponder()
         
         
     }

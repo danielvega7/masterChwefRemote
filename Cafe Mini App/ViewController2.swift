@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController2: UIViewController {
+class ViewController2: UIViewController, UITextFieldDelegate {
     
     
 
@@ -27,7 +27,9 @@ var name = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         print(name, price)
-        
+        v2foodTextField.delegate = self
+        v2priceTextField.delegate = self
+        deleteTextField.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -58,6 +60,9 @@ var name = ""
                 addedLabel.text = "type something in text field bruh"
             }
         
+        v2foodTextField.resignFirstResponder()
+        v2priceTextField.resignFirstResponder()
+        
     }
     
     @IBAction func deleteAction(_ sender: UIButton) {
@@ -75,6 +80,7 @@ var name = ""
             }
             jerry += 1
         }
+        deleteTextField.resignFirstResponder()
     }
     
     
