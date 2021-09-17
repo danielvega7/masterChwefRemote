@@ -41,18 +41,42 @@ class ViewController: UIViewController {
     
     
     @IBAction func addToCart(_ sender: UIButton) {
-        
-        if "" != foodTextField.text{
-            SuperMegaVariables.daFood.append(foodTextField.text!)
+        if foodTextField.text == "" || priceTextField.text == "" || Double(priceTextField.text!) == nil{
+            cartLabel.text = "one or both of the textfields empty"
+        }
+        else{
+        var jason = 0
+        while(jason <= SuperMegaVariables.count){
+            
+            if foodTextField.text == SuperMegaVariables.menuFood[SuperMegaVariables.count]{
+            
             
             if nil != priceTextField.text {
                 
                 if Double(priceTextField.text!) != nil{
+                    
+                    if Double(priceTextField.text!) == SuperMegaVariables.menuPrice[SuperMegaVariables.count]{
+                    SuperMegaVariables.daFood.append(foodTextField.text!)
             SuperMegaVariables.daPrice.append(Double(priceTextField.text!)!)
                     hereCount += 1
                     SuperMegaVariables.count += 1
                     cartLabel.text = "food: \(SuperMegaVariables.daFood[SuperMegaVariables.count]) price: \(SuperMegaVariables.daPrice[SuperMegaVariables.count])"
-                   
+                        
+                        
+                        //textview
+                        var jamal = 0
+                        var addedString = ""
+                        while(jamal <= SuperMegaVariables.count){
+                            addedString += "\(jamal + 1).) food: \(SuperMegaVariables.daFood[jamal]) \t price: \(SuperMegaVariables.daPrice[jamal]) \n"
+                            jamal += 1
+                        }
+                        cartTextView.text = "Shopping Cart \n" + addedString
+                        
+                        
+                    }
+                    else{
+                        cartLabel.text = "prices don't match menu"
+                    }
                 }
                 else{
                     cartLabel.text = "fix syntax rn"
@@ -61,9 +85,13 @@ class ViewController: UIViewController {
             else{
                 cartLabel.text = "type something or else"
             }
+                
         }
         else{
-            cartLabel.text = "type something in text field bruh"
+            cartLabel.text = "food doesn't match any on menu"
+        }
+            jason += 1
+        }
         }
         
         
@@ -71,14 +99,6 @@ class ViewController: UIViewController {
         
         
         
-        
-        var jamal = 0
-        var addedString = ""
-        while(jamal <= SuperMegaVariables.count){
-            addedString += "\(jamal + 1).) food: \(SuperMegaVariables.daFood[jamal]) \t price: \(SuperMegaVariables.daPrice[jamal]) \n"
-            jamal += 1
-        }
-        cartTextView.text = "Shopping Cart \n" + addedString
     }
     
     

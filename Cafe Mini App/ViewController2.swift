@@ -19,6 +19,9 @@ var name = ""
     @IBOutlet weak var v2foodTextField: UITextField!
     @IBOutlet weak var v2priceTextField: UITextField!
     
+    
+    @IBOutlet weak var deleteTextField: UITextField!
+    
     @IBOutlet weak var addedLabel: UILabel!
     
     override func viewDidLoad() {
@@ -27,32 +30,52 @@ var name = ""
         
         // Do any additional setup after loading the view.
     }
+    
     @IBAction func addAction(_ sender: UIButton) {
-        if "" != v2foodTextField.text{
-            
-            
-            if nil != v2priceTextField.text {
+        
+            if "" != v2foodTextField.text{
                 
-                if Double(v2priceTextField.text!) != nil{
-                    SuperMegaVariables.menuFood.append(v2foodTextField.text!)
-            SuperMegaVariables.menuPrice.append(Double(v2priceTextField.text!)!)
+                
+                if nil != v2priceTextField.text {
                     
-                    SuperMegaVariables.menuCount += 1
-                    addedLabel.text = "food: \(SuperMegaVariables.daFood[SuperMegaVariables.menuCount]) price: \(SuperMegaVariables.daPrice[SuperMegaVariables.menuCount])"
-                   
+                    if Double(v2priceTextField.text!) != nil{
+                        SuperMegaVariables.menuFood.append(v2foodTextField.text!)
+                SuperMegaVariables.menuPrice.append(Double(v2priceTextField.text!)!)
+                        
+                        SuperMegaVariables.menuCount += 1
+                        addedLabel.text = "food: \(SuperMegaVariables.menuFood[SuperMegaVariables.menuCount]) price: \(SuperMegaVariables.menuPrice[SuperMegaVariables.menuCount])"
+                       
+                    }
+                    else{
+                        addedLabel.text = "fix syntax rn"
+                    }
                 }
                 else{
-                    addedLabel.text = "fix syntax rn"
+                    addedLabel.text = "type something or else"
                 }
             }
             else{
-                addedLabel.text = "type something or else"
+                addedLabel.text = "type something in text field bruh"
             }
-        }
-        else{
-            addedLabel.text = "type something in text field bruh"
-        }
-    }
+        
     }
     
-
+    @IBAction func deleteAction(_ sender: UIButton) {
+       var jerry = 0
+        while(jerry < SuperMegaVariables.menuCount){
+            if deleteTextField.text == SuperMegaVariables.menuFood[jerry]{
+                SuperMegaVariables.menuFood.remove(at: jerry)
+                SuperMegaVariables.menuPrice.remove(at: jerry)
+                SuperMegaVariables.menuCount -= 1
+                addedLabel.text = "deleted"
+                break
+            }
+            else{
+                addedLabel.text = "Item not in menu"
+            }
+            jerry += 1
+        }
+    }
+    
+    
+}
